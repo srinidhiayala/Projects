@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="560.0" prefWidth="644.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project3.GymManagerController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <TabPane prefHeight="541.0" prefWidth="634.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Membership">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="518.0" prefWidth="645.0">
+                            <children>
+                                <Label layoutX="92.0" layoutY="60.0" prefHeight="22.0" prefWidth="83.0" text="First Name" AnchorPane.leftAnchor="92.0">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="92.0" layoutY="92.0" prefHeight="22.0" prefWidth="83.0" text="Last Name">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="92.0" layoutY="126.0" prefHeight="22.0" prefWidth="116.0" text="Date of Birth">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="92.0" layoutY="160.0" prefHeight="22.0" prefWidth="116.0" text="Location">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="92.0" layoutY="192.0" prefHeight="22.0" prefWidth="189.0" text="Membership Type">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="firstName" layoutX="255.0" layoutY="58.0" prefHeight="26.0" prefWidth="245.0" />
+                                <TextField fx:id="lastName" layoutX="255.0" layoutY="90.0" prefHeight="26.0" prefWidth="245.0" />
+                                <TextField fx:id="gymLocation" layoutX="255.0" layoutY="158.0" prefHeight="26.0" prefWidth="245.0" />
+                                <DatePicker fx:id="date" editable="false" layoutX="255.0" layoutY="124.0" />
+                                <HBox layoutX="248.0" layoutY="187.0" prefHeight="32.0" prefWidth="338.0" />
+                                <HBox layoutX="256.0" layoutY="194.0" prefHeight="26.0" prefWidth="277.0">
+                                    <children>
+                                        <RadioButton fx:id="standard" mnemonicParsing="false" selected="true" text="Standard">
+                                            <font>
+                                                <Font name="American Typewriter" size="13.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="type" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton fx:id="family" mnemonicParsing="false" text="Family" toggleGroup="$type">
+                                            <font>
+                                                <Font name="American Typewriter" size="13.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton fx:id="premium" mnemonicParsing="false" text="Premium" toggleGroup="$type">
+                                            <font>
+                                                <Font name="American Typewriter" size="13.0" />
+                                            </font>
+                                        </RadioButton>
+                                    </children>
+                                </HBox>
+                                <Button layoutX="188.0" layoutY="229.0" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="90.0" text="Add">
+                                    <font>
+                                        <Font name="American Typewriter" size="13.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="327.0" layoutY="229.0" mnemonicParsing="false" onAction="#remove" prefHeight="30.0" prefWidth="90.0" text="Remove">
+                                    <font>
+                                        <Font name="American Typewriter" size="13.0" />
+                                    </font>
+                                </Button>
+                                <TextArea fx:id="output" layoutX="8.0" layoutY="271.0" prefHeight="209.0" prefWidth="590.0" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Fitness Class">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="87.0" layoutY="29.0" prefHeight="22.0" prefWidth="83.0" text="First Name">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="87.0" layoutY="68.0" prefHeight="22.0" prefWidth="83.0" text="Last Name">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="87.0" layoutY="109.0" prefHeight="22.0" prefWidth="121.0" text="Date of Birth">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="87.0" layoutY="152.0" prefHeight="22.0" prefWidth="121.0" text="Class Name">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="87.0" layoutY="193.0" prefHeight="22.0" prefWidth="121.0" text="Instructor Name">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="87.0" layoutY="228.0" prefHeight="22.0" prefWidth="121.0" text="Location">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="classFirstName" layoutX="236.0" layoutY="27.0" prefHeight="26.0" prefWidth="307.0" />
+                                <TextField fx:id="classLastName" layoutX="236.0" layoutY="66.0" prefHeight="26.0" prefWidth="307.0" />
+                                <TextField fx:id="className" layoutX="236.0" layoutY="150.0" prefHeight="26.0" prefWidth="307.0" />
+                                <TextField fx:id="instructorName" layoutX="236.0" layoutY="187.0" prefHeight="26.0" prefWidth="307.0" />
+                                <TextField fx:id="locationName" layoutX="236.0" layoutY="226.0" prefHeight="26.0" prefWidth="307.0" />
+                                <DatePicker fx:id="classDob" editable="false" layoutX="236.0" layoutY="107.0" />
+                                <TextArea fx:id="outputFitnessClass" layoutX="16.0" layoutY="299.0" prefHeight="176.0" prefWidth="573.0" />
+                        <Button layoutX="71.0" layoutY="264.0" mnemonicParsing="false" onAction="#checkInToClass" prefHeight="26.0" prefWidth="115.0" text="Check in Member" />
+                        <Button layoutX="195.0" layoutY="264.0" mnemonicParsing="false" onAction="#dropClass" prefHeight="26.0" prefWidth="115.0" text="Drop Member" />
+                        <Button layoutX="319.0" layoutY="264.0" mnemonicParsing="false" onAction="#guestCheckIn" prefHeight="26.0" prefWidth="115.0" text="Check in Guest" />
+                        <Button layoutX="444.0" layoutY="264.0" mnemonicParsing="false" onAction="#dropGuestClass" prefHeight="26.0" prefWidth="115.0" text="Drop Guest" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Other Information">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="35.0" layoutY="60.0" prefHeight="17.0" prefWidth="245.0" text="Member Database " underline="true">
+                                    <font>
+                                        <Font name="American Typewriter" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="379.0" layoutY="60.0" prefHeight="17.0" prefWidth="245.0" text="Class Schedule" underline="true">
+                                    <font>
+                                        <Font name="American Typewriter" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="379.0" layoutY="179.0" prefHeight="17.0" prefWidth="245.0" text="Membership Fee" underline="true">
+                                    <font>
+                                        <Font name="American Typewriter" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Button layoutX="379.0" layoutY="207.0" mnemonicParsing="false" onAction="#printFees" text="Show Bill">
+                                    <font>
+                                        <Font name="American Typewriter" size="13.0" />
+                                    </font>
+                                </Button>
+                                <TextArea fx:id="outputInfo" layoutX="14.0" layoutY="275.0" prefHeight="200.0" prefWidth="581.0">
+                                    <font>
+                                        <Font name="American Typewriter" size="13.0" />
+                                    </font></TextArea>
+                        <VBox layoutX="48.0" layoutY="89.0" prefHeight="171.0" prefWidth="238.0">
+                           <children>
+                                      <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#print" text="Print">
+                                          <font>
+                                              <Font name="American Typewriter" size="13.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                      </Button>
+                                      <Button mnemonicParsing="false" onAction="#printByCounty" prefHeight="26.0" prefWidth="174.0" text="Print by County/Zipcode">
+                                          <font>
+                                              <Font name="American Typewriter" size="13.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                      </Button>
+                                      <Button mnemonicParsing="false" onAction="#printByName" prefHeight="26.0" prefWidth="217.0" text="Print by Last Name/First Name">
+                                          <font>
+                                              <Font name="American Typewriter" size="13.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                      </Button>
+                                      <Button mnemonicParsing="false" onAction="#printByExpiration" prefHeight="26.0" prefWidth="176.0" text="Print by Expiration Date">
+                                          <font>
+                                              <Font name="American Typewriter" size="13.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                      </Button>
+                                      <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#importMembers" prefHeight="26.0" prefWidth="195.0" text="Load members from File">
+                                          <font>
+                                              <Font name="American Typewriter" size="13.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                      </Button>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="375.0" layoutY="92.0" prefHeight="83.0" prefWidth="160.0">
+                           <children>
+                                      <Button mnemonicParsing="false" onAction="#displayClasses" text="Show All Classes">
+                                          <font>
+                                              <Font name="American Typewriter" size="13.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                      </Button>
+                                      <Button mnemonicParsing="false" onAction="#importClassSchedule" text="Load Classes from File">
+                                          <font>
+                                              <Font name="American Typewriter" size="13.0" />
+                                          </font>
+                                      </Button>
+                           </children>
+                        </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
