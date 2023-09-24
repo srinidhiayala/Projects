@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">project5</string>
+
+    <!--Pizza Build-->
+    <string name = "noToppingsSelectedToAdd">Must select topping to add</string>
+    <string name = "maxToppingsReached">Maximum number of toppings (7 max) reached!</string>
+    <string name = "noToppingsSelectedToRemove">Must select topping to remove</string>
+    <string name = "minOneTopping">The Build Your Own Pizza needs at least one topping!</string>
+    <string name = "pizzaAdded">Pizza added!</string>
+
+    <!-- Order Basket Features -->
+    <string name = "basket_view_title">Order Basket</string>
+    <string name = "removeFromBasketButton">Remove From Basket</string>
+    <string name = "submitOrderButton">Submit Order</string>
+    <string name = "subtotalLabel">Subtotal:</string>
+    <string name = "subtotalAmount">Subtotal:</string>
+    <string name = "taxLabel">Tax:</string>
+    <string name = "taxAmount">Tax:</string>
+    <string name = "totalLabel">Total:</string>
+    <string name = "totalAmount">Total:</string>
+    <string name = "dollarPlaceholder">$0.00</string>
+
+    <string name = "removeItemMessage">Item successfully removed from order!</string>
+    <string name = "removeEmptyBasket">Cannot remove from an empty basket!</string>
+    <string name = "removeNoSelection">Please select an item to remove!</string>
+
+    <string name = "submitOrderMessage">Order submitted!</string>
+    <string name = "submitError">Error with Submitting Order!</string>
+    <string name = "submitEmptyBasket">Cannot submit an empty order!</string>
+    <string name = "RemoveError">Error with Removing Item!</string>
+    <string name = "OKButton">OK</string>
+    <string name = "clearItems">Cleared All Orders!</string>
+
+
+
+    <!-- Store Order Features -->
+    <string name = "store_view_title">Store Orders</string>
+    <string name = "cancelOrderButton">Cancel Order</string>
+    <string name = "cancelAllOrderMessage">All orders successfully canceled!</string>
+    <string name = "cancelOrderMessage">Order successfully canceled!</string>
+    <string name = "cancelError">Error with Canceling Order!</string>
+    <string name = "cancelEmptyStore">Cannot cancel when no orders have been submitted!</string>
+    <string name = "cancelNoSelection">Please select an order to cancel!</string>
+</resources>
