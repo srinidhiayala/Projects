@@ -1,0 +1,188 @@
+Java class/method name being tested: Date class, isValid() method
+
+Test Case #
+Requirement
+Test Description
+Input Data
+Expected result/output
+
+1
+Valid range for the month shall be 1-12
+Create instance of Date with month=13
+13/8/1977
+False
+
+2
+Valid range for month shall be 1-12
+Create instance of Date with month=0
+0/14/2004
+False
+
+3
+Valid range for month shall be 1-12
+Create instance of Date with month=9
+9/23/2002
+True
+
+4
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=1 and day=31
+1/31/1990
+True
+
+5
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=12 and day=31
+12/31/2005
+True
+
+6
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=4 and day=31
+4/31/2006
+False
+
+7
+April, June, September and November shall have 30 days
+Create instance of Date with month=6 and day=30
+6/30/1999
+True
+
+8
+April, June, September and November shall have 30 days
+Create instance of Date with month=4 and day=30
+4/30/1976
+True
+
+9
+April, June, September and November shall have 30 days
+Create instance of Date with month=6 and day=31
+6/31/1965
+False
+
+10
+Month, date and year shall be greater than zero (positive)
+Create instance of Date with month=-1
+-1/31/2003
+False
+
+11
+Month, date and year shall be greater than zero (positive)
+Create instance of Date with day=-8
+4/-8/2003
+False
+
+12
+Month, date and year shall be greater than zero (positive)
+Create instance of Date with year=-2005
+6/17/-2005
+False
+
+13
+Month, date and year shall be greater than zero (positive)
+Create instance of Date with month=8, day=24 and year=2007
+8/24/2007
+True
+
+14
+Number of days in February for a non-leap year shall be 28
+Create instance of Date with month=2, day>28 and a non-leap year
+2/29/2003
+False
+
+15
+Number of days in February for a non-leap year shall be 28
+Create instance with Date with month=2. day=29 and leap year
+2/29/2000
+True
+
+16
+Number of days in February for a non-leap year shall be 28
+Create instance of Date with month=2, date=13 and non leap year
+2/13/2022
+True
+
+17
+Number of days in February shall never exceed 29
+Create instance of Date with month=2, day=32 and year=2003
+2/30/2003
+False
+
+18
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=3 and day=31
+3/30/1990
+True
+
+19
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=5 and day=31
+5/30/1989
+True
+
+20
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=7 and day=31
+7/32/1993
+False
+
+21
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=8 and day=31
+8/32/1995
+False
+
+22
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=10 and day=31
+10/31/1991
+True
+
+23
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=12 and day=31
+12/31/1990
+True
+
+24
+January, March, May, July, August, October and December shall have 31 days
+Create instance of Date with month=12 and day=32
+12/32/1998
+False
+
+25
+April, June, September and November shall have 30 days
+Create instance of Date with month=9 and day=30
+9/31/1978
+False
+
+26
+April, June, September and November shall have 30 days
+Create instance of Date with month=11 and day=30
+11/30/2004
+True
+
+27
+April, June, September and November shall have 30 days
+Create instance of Date with month=11 and day=31
+11/31/2008
+False
+
+28
+Valid number of days must never exceed 31
+Create instance of Date with month=12 and day=32
+10/32/1989
+False
+
+29
+Valid number of days must never exceed 31
+Create instance of Date with month=7 and day=15
+7/15/1977
+True
+
+30
+Current date is valid
+Create instance of Date with current month, date and year (oct 3, 2022)
+10/03/2022
+True
+

@@ -1,0 +1,91 @@
+Java class/method name being tested: Member class, compareTo() method
+
+Test Case #
+Requirement
+Test Description
+Input Data
+Expected result/output
+
+1
+Members with the same last name and first name shall return -1
+Compare instances of Member that have the same first and last name
+Member 1= John Doe, Member 2= John Doe
+0
+
+2
+Members that have the same last name and the argument member has a lexicographically smaller first name shall return -1
+Compare instances of Member that have the same last name and the argument member has a lexicographically smaller first name
+Member 1=John Doe, Member 2=Jane Doe
+-1
+
+3
+Members that have the same last name and the instance member has a lexicographically smaller first name shall return 1
+Compare instances of Member that have the same last name and the instance member has a lexicographically smaller first name 
+Member 1=Jane Doe, Member 2=John Doe
+1
+
+4
+Instance member has a lexicographically smaller first name but not last name shall return -1
+Compare instances of Member that has a lexicographically smaller first name but not last name
+Member 1=April March, Member 2=John Doe
+-1
+
+5
+Instance member has a lexicographically larger first name but lexicographically smaller last name shall return 1
+Compare instances of Member that has a lexicographically larger first name but lexicographically smaller last name
+Member 1= Mary Lindsey, Member 2=April March
+1
+
+6
+Instance member has a lexicographically smaller last name and first name shall return 1
+Compare instances of Member that has a lexicographically smaller last name and first name
+Member 1=Carl Brown, Member 2=Mary Lindsey
+1
+
+7
+Instance member has a lexicographically bigger last name and first name shall return -1
+Compare instances of Member that has a lexicographically bigger last name and first name
+Member 1=Paul Siegel, Member 2=Duke Ellington
+-1
+
+8
+Parameter member has a lexicographically smaller first name but not last name shall return 1
+Compare instances of Member that has a lexicographically smaller first name but not last name
+Member 1=Mary Lindsey, Member 2= Bill Scanlan
+1
+
+9
+Parameter member has a lexicographically larger first name but lexicographically smaller last name shall return -1
+Compare instances of Member that has a lexicographically larger first name but lexicographically smaller last name
+Member 1=John Doe, Member 2=Roy Brooks
+-1
+
+10
+Parameter member has a lexicographically smaller last name and first name shall return -1
+Compare instances of Member that has a lexicographically smaller last name and first name
+Member 1=Mary Lindsey, Member 2=Duke Ellington
+-1
+
+11
+Parameter member has a lexicographically bigger last name and first name shall return 1
+Compare instances of Member that has a lexicographically bigger last name and first name
+Member 1=Jane Doe, Member 2=Paul Siegel
+1
+
+12
+Comparing without case difference yields same result (redo case #5 with upper and lower case mix)
+Compare instances of Member that are a mix of upper case and lower case
+Member 1= mary Lindsey, Member 2=April march
+1
+
+13
+Comparing two names without case difference yields same result (redo case #6 with all lowercase) shall return 1
+Compare instances of Member that are all lowercase
+Member 1=carl brown, Member 2= mary lindsey
+1
+
+14
+Comparing two names without case difference yields same result (redo case #7 with all uppercase) shall return -1
+Compare instances of Member that are all uppercase
+Member 1=PAUL SIEGEL, Member 2= DUKE ELLINGTON
+-1
